@@ -4,3 +4,7 @@
 *.xml
 
 *.pyc
+
+*.sqlite3
+
+image_recognition/local_settings.py
