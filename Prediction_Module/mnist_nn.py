@@ -1,9 +1,7 @@
 from sklearn.datasets import fetch_mldata
 from sklearn.neural_network import MLPClassifier
-
 import pickle
-
-filename = './trained_models/nn_trained_digit_classifier.pkl'
+filename = 'prediction_Module/trained_models/nn_trained_digit_classifier.pkl'
 
 
 def train_nn():
