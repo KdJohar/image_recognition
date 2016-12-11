@@ -22,5 +22,6 @@ def upload_image(request):
             image_object = form.save(commit=True)
             resut_dict = dict()
             resut_dict['name'] = image_object.image.name.split('/')[1]
+            resut_dict['path'] = image_object.image.url
             resut_dict['label'], resut_dict['confidence'] = predict(image_object.image.path)
             return HttpResponse(json.dumps(resut_dict))
