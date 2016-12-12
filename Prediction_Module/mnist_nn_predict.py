@@ -4,7 +4,7 @@ import pickle
 from PIL import Image
 import numpy as np
 
-filename = 'prediction_Module/trained_models/nn_trained_digit_classifier.pkl'
+filename = 'Prediction_Module/trained_models/nn_trained_digit_classifier.pkl'
 
 
 def predict_nn(img):

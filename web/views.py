@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.views.decorators.csrf import csrf_exempt
-from prediction_Module.mnist_nn_predict import predict
+from Prediction_Module.mnist_nn_predict import predict
 from .forms import ImageUploadForm
 import json
 from django.http import HttpResponse

@@ -22,6 +22,8 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = '_1&)w=%$1%3fxfomj9we^x0q6ls9b7=rj^z#jkf+++ctlz(^-0'
 
+DEBUG = True
+
 
 # Application definition
 
@@ -68,7 +70,12 @@ WSGI_APPLICATION = 'image_recognition.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/1.10/ref/settings/#databases
-
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    }
+}
 
 
 # Password validation
@@ -109,6 +116,10 @@ STATICFILES_DIRS = (
 
 )
 
+STATIC_URL = '/static/'
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'
 
 try:
     from local_settings import *
